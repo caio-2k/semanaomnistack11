@@ -1,8 +1,8 @@
 import React from 'react';
+//Integração do React com o navegador (árvore de elementos)
 import ReactDOM from 'react-dom';
-import './index.css';
+//IMportando app.js dentro de uma variavel app
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,8 +10,12 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+/**
+ * ReactDOM está rendenrizando (clocando em tela)
+ * o app (como uma tag html) dentro da div com ID root
+ * atraves do document.
+ * Ou seja, um componente no react nada mais é do que uma função que
+ * retorna HTML (ela pode ter funcionalidade javascript, css , etc), 
+ * porém quando esse html está escrito(integrado) dentro do javascript 
+ * a gente chama isso de JSX (Javascript XML(sintaxe do html))
+ */

@@ -1,11 +1,26 @@
+//Importando React
 import React from 'react';
 
-//JSX - JAVASCRIPT XML
+//Importando Global CSS
+import './global.css';
+
+//Importando Logon
+//import Logon from './pages/Logon';
+
+//Importando as rotas ao invés do logon
+import Routes from './routes';
+
+//Detalhe: Os componentes devem começar com letra maiuscula.
+
 
 function App() {
+
   return (
-    <h1>Hello Omnistack</h1>
+    <Routes />
   );
+
 }
 
 export default App;
+
+//JSX - JAVASCRIPT XML

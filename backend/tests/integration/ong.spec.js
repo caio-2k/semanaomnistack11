@@ -18,7 +18,7 @@ describe('ONG', () => {
     .post('/ongs')
     //.set('Authorization', 'ID_ONGVALIDO')
     .send({
-      name: "LORL2",
+      name: "LORL",
       email: "lorl.contato@gmail.com",
       whatsapp: "84996458714",
       city: "Rio do Sul",

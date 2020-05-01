@@ -1,6 +1,8 @@
 //Importando o express (contendo todas as suas funcionalidades) p/ variável "express".
 const express = require('express');
 
+const { errors } = require('celebrate');
+
 //IMportando as rotas da aplicação
 const routes = require('./routes');
 
@@ -31,11 +33,15 @@ app.use(express.json());
  //Agora usando as rotas importadas
  app.use(routes);
 
+ app.use(errors());
+
 
 //Mandar a aplicação ouvir a porta 3333
 //Node = 3333, React = 3000
-app.listen(3333);
+//app.listen(3333);
 //Necessário para acessar o localhost e obter acesso a aplicação
+
+module.exports = app;
 
 
 //Seguinte: Criar projeto REACT.

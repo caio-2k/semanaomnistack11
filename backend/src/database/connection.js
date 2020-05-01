@@ -4,8 +4,10 @@ const knex = require('knex');
 //Importando as configurações do banco de dados
 const configuration = require('../../knexfile');
 
-//Criando a conexão
-const connection = knex(configuration.development);
+const config = process.env.NODE_ENV === 'test' ? configuration.test : configuration.development;
+
+//Criando a conexão 
+const connection = knex(config);
 /**
  * Foi criado a conexão utilizando o knex e passando para ele como parametro
  * o configuration.development que é a conexão de desenvolvimento (dentre varias)
